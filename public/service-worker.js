@@ -13,13 +13,13 @@ const FILES_TO_CACHE = [
 const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
 
-//  we can determine while files we want to store with in thie cache
+//  Install
 self.addEventListener("install", function (event) {
   // open cache
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log("Your files were pre-cached successfully!");
-      // add all these files that I stored in these strings.
+      // add all these files
       return cache.addAll(FILES_TO_CACHE);
     })
   );
@@ -27,6 +27,7 @@ self.addEventListener("install", function (event) {
   self.skipWaiting();
 });
 
+//  Activate
 self.addEventListener("activate", function (event) {
   event.waitUntil(
     caches.keys().then((keyList) => {
@@ -71,7 +72,7 @@ self.addEventListener("fetch", function (event) {
     return;
   }
 
-  // if the request is not for the API, serve static assets using "offline-first" approach.
+  // if !API serve static assets
   event.respondWith(
     caches.match(event.request).then(function (response) {
       return response || fetch(event.request);
