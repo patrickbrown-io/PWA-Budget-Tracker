@@ -1,5 +1,3 @@
-https://infinite-citadel-61093.herokuapp.com/
-
 # Progressive Web Application - Online/Offline Budget App - Homework 19
 
 ## Description
@@ -8,14 +6,13 @@ Giving users a fast and easy way to track their money is important, but allowing
 
 ## Installation
 
-- To see the porfolio, visit my [Github Repository](https://github.com/patrickbrown-io/team-profile-generator-app)
-
+- Visit my [Github Repository](https://github.com/patrickbrown-io/team-profile-generator-app)
 - To install this app, clone the repository and npm i.
 - See Useage for seeding with test data
 
 ## Usage
 
-To run: - Use mySQL to run the schema in the db directory. - In Node, enter 'npm run seed' to seed the database - After seeding, npm run start or navigate to the root and 'Node server.js'.
+For a live deployment: [VIEW LIVE DEPLOYMENT](https://infinite-citadel-61093.herokuapp.com/)
 
 ![Screenshot of Local Deployment](assets/screenshot.jpg)
 
